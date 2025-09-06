@@ -1,5 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 
+interface QuizItem {
+  character: string;
+  radical: string;
+  isCorrect: boolean;
+  correctAnswer: string;
+}
+
 const allQuizData = [
   // 正確配對
   { character: "現", radical: "玉", isCorrect: true, correctAnswer: "玉" },
@@ -48,7 +55,7 @@ const allQuizData = [
 const totalQuestions = 3;
 
 function App() {
-  const [quizData, setQuizData] = useState([]);
+  const [quizData, setQuizData] = useState<QuizItem[]>([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [gameActive, setGameActive] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -58,7 +65,7 @@ function App() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [fontSize, setFontSize] = useState(0);
 
-  function shuffle(array: any[]) {
+  function shuffle(array: QuizItem[]) {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];

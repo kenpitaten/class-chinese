@@ -144,7 +144,7 @@ function App() {
   return (
     <>
       <div className="flex items-center justify-center bg-[#FFFCEA]">
-        <div className="relative flex h-dvh w-full max-w-dvh flex-col items-center py-[1%]">
+        <div className="relative flex w-full max-w-dvh flex-col items-center py-[1%]">
           <h1 className="mb-5 w-full shrink-0 grow-0 basis-2 rounded-[40px] bg-[#FFB44B] py-3 text-center text-[36px] font-bold text-black">
             部首快問快答
           </h1>
@@ -212,14 +212,14 @@ function App() {
                 ) : (
                   <>
                     <button
-                      className="grow rounded-full bg-[#FF8484] px-[77px] py-5 text-center text-[36px] font-bold text-white shadow-2xl"
+                      className="grow rounded-full bg-[#FF8484] px-[77px] py-5 text-center text-[52px] font-bold text-white shadow-2xl"
                       onClick={() => handleSwipe(false)}
                       disabled={isAnimating || showFeedback}
                     >
                       X
                     </button>
                     <button
-                      className="grow rounded-full bg-[#90FF9B] px-[77px] py-5 text-center text-[36px] font-bold text-white shadow-2xl"
+                      className="grow rounded-full bg-[#90FF9B] px-[77px] py-5 text-center text-[52px] font-bold text-white shadow-2xl"
                       onClick={() => handleSwipe(true)}
                       disabled={isAnimating || showFeedback}
                     >

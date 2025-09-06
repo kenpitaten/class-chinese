@@ -144,7 +144,7 @@ function App() {
   return (
     <>
       <div className="flex items-center justify-center bg-[#FFFCEA]">
-        <div className="relative flex w-full max-w-dvh flex-col items-center py-[1%]">
+        <div className="relative flex h-dvh w-full max-w-dvh flex-col items-center py-[1%]">
           <h1 className="mb-5 w-full shrink-0 grow-0 basis-2 rounded-[40px] bg-[#FFB44B] py-3 text-center text-[36px] font-bold text-black">
             部首快問快答
           </h1>
